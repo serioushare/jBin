@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Hello World 1</title>
+        <style>
+			i{color:#06C;font-style:normal;}
+		</style>
+        
+        <script src="js/jbin.js"></script>
+        
+        <script type="binary/jbin"src="file.jbin"></script>
+	</head>
+
+	<body style="background-color:#F9F9F9">
+    	<h1>Hello World 1</h1>
+        <p> This example directly writes "Hello World" to the the console.</p>
+        <div style="background-color:white; border:1px solid #0A0A0A">
+        	<code>
+// javascript<br />
+console.log("Hello World");<br />
+<br />
+// jbin asm<br />
+main:<br />
+&nbsp;&nbsp;mov edx, 11<br />
+&nbsp;&nbsp;mov ecx, text<br />
+&nbsp;&nbsp;mov ebx, 0<br />
+&nbsp;&nbsp;mov eax, 4<br />
+&nbsp;&nbsp;int 0x80<br />
+<br />
+end:<br />
+&nbsp;&nbsp;mov eax, 1<br />
+&nbsp;&nbsp;int 0x80<br />
+<br />
+section .data<br />
+&nbsp;&nbsp;text db 'Hello World'<br />
+<br />
+// jbin binary<br />
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F</i><br />
+<i>00000000</i>&nbsp;30 ED 0B 32 EC 00 00 00 16 30 EB 00 30 EA 04 F0&nbsp;&nbsp;0í.2ì....0ë.0ê.ð<br />
+<i>00000010</i>&nbsp;80 30 EA 01 F0 80 00 48 00 65 00 6C 00 6C 00 6F&nbsp;&nbsp;€0ê.ð€.H.e.l.l.o<br />
+<i>00000020</i>&nbsp;00 20 00 57 00 6F 00 72 00 6C 00 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. .W.o.r.l.d<br />
+	        </code>
+        </div>
+	</body>
+</html>

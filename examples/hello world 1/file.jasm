@@ -1,0 +1,14 @@
+
+main:
+  mov edx, 11
+  mov ecx, text
+  mov ebx, 0
+  mov eax, 4
+  int 0x80
+
+end:
+  mov eax, 1
+  int 0x80
+
+section .data
+  text db 'Hello World'

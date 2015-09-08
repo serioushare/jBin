@@ -1,0 +1,23 @@
+
+section .head
+  version 1, 0, 0
+  name 'Dev Test File'
+  author 'E.P. de Haas'
+
+section .func
+  .def print print
+
+main:
+  mov eax, 1
+  int 0x80
+
+print:
+  mov edx, 11
+  mov ecx, text
+  mov ebx, 0
+  mov eax, 4
+  int 0x80
+  jmp main
+
+section .data
+  text db 'Hello World'
