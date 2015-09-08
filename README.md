@@ -2,7 +2,9 @@
 
 jBin aims to offer web developers a way to compress there code even further by replacing the entire code with binary instructions. This gives a number of advantages (and some cons of course).
 
-####### Still puzzling with the hex codes. No hex-file will thus be stable, altho i'll try to keep the examples working ;)
+##### - IMPORTANT NOTE -
+Still puzzling with the hex codes. No hex-file will thus be stable!
+Examples use a fixed jbin.js file to keep them working ;)
 
 
 ### Example "Hello World 1"
